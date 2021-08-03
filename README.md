@@ -53,6 +53,7 @@ This will allow incoming traffic from the internet on ports 80 and 443 (the port
 
 ## Configure the Cloudflare DNS records. 
 After your domain has been transferred to Cloudflare, log into the [Cloudflare dashboard](https://dash.cloudflare.com) and click on your domain. Then click on the DNS button at the top, and click "Add record" with the following information:
+
     * Type: A
     * Name: 5e
     * IPv4 Address: <YOUR-INSTANCE-IP>
