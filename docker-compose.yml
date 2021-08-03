@@ -1,0 +1,31 @@
+version: "3"
+services:
+  traefik:
+    container_name: traefik
+    image: traefik:latest
+    networks:
+      - web
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - ./traefik.toml:/traefik.toml
+      - ./acme.json:/acme.json
+
+  5etools:
+    container_name: 5etools
+    image: jafner/5etools-docker
+    volumes:
+      - ./htdocs:/usr/local/apache2/htdocs
+    environment:
+      - IMG=false
+    networks:
+      - web
+    labels:
+      - traefik.http.routers.5etools.rule=Host(`$DOMAIN`)
+      - traefik.http.routers.5etools.tls.certresolver=lets-encrypt
+
+networks:
+  web:
+    external: true
