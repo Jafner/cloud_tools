@@ -20,6 +20,7 @@ Steps:
 6. Set up the VM with all the software we need. Now that we're in the terminal, you can just copy-paste commands to run. You can either run the following command (which is just a bunch of commands strung together), or run each command one at a time by following the lettered instructions below:
 
 `sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get -y install git docker docker-compose && sudo systemctl enable docker && sudo usermod -aG docker $USER && logout` OR:
+
 	a. Update the system with `sudo apt-get update && sudo apt-get upgrade -y`. 
 	b. Install Docker and Docker Compose with `sudo apt-get -y install git docker docker-compose`.
 	c. Enable the docker service within systemd with `sudo systemctl enable docker`.
@@ -48,4 +49,4 @@ DOMAIN=5e.your.domain
 EMAIL=youremail@gmail.com
 ```
 
-Then run the setup script with `./setup`
+Make the setup script executable, then run it with `chmod +x setup.sh && ./setup.sh`
