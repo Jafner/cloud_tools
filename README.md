@@ -28,7 +28,7 @@ Steps:
 
 7. Configure the VM firewall. On the "Compute -> Instances -> Instance Details" page, under "Instance Information -> Primary VNIC -> Subnet", click the link to the subnet's configuration page, then click on the default security list. Click "Add Ingress Rules", then "+ Another Ingress Rule" and fill out your ingress rules like this:
 
-[!ingress_rules.png](/ingress_rules.png)
+![ingress_rules.png](/ingress_rules.png)
 
 This will allow incoming traffic from the internet on ports 80 and 443 (the ports used by HTTP and HTTPS respectively). 
 
