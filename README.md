@@ -21,11 +21,11 @@ Steps:
 
 `sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get -y install git docker docker-compose && sudo systemctl enable docker && sudo usermod -aG docker $USER && logout` OR:
 
-	a. Update the system with `sudo apt-get update && sudo apt-get upgrade -y`. 
-	b. Install Docker and Docker Compose with `sudo apt-get -y install git docker docker-compose`.
-	c. Enable the docker service within systemd with `sudo systemctl enable docker`.
-	d. Add your user to the docker group with `sudo usermod -aG docker $USER`.
-	e. Log out with `logout`.
+a. Update the system with `sudo apt-get update && sudo apt-get upgrade -y`. 
+b. Install Docker and Docker Compose with `sudo apt-get -y install git docker docker-compose`.
+c. Enable the docker service within systemd with `sudo systemctl enable docker`.
+d. Add your user to the docker group with `sudo usermod -aG docker $USER`.
+e. Log out with `logout`.
 
 7. Configure the VM firewall. On the "Compute -> Instances -> Instance Details" page, under "Instance Information -> Primary VNIC -> Subnet", click the link to the subnet's configuration page, then click on the default security list. Click "Add Ingress Rules", then "+ Another Ingress Rule" and fill out your ingress rules like this:
 
