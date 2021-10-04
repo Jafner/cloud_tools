@@ -18,8 +18,6 @@ services:
     image: jafner/5etools-docker
     volumes:
       - ./htdocs:/usr/local/apache2/htdocs
-    environment:
-      - IMG=false
     networks:
       - web
     labels:
